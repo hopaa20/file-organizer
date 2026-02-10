@@ -1,13 +1,7 @@
 import os
 import shutil
-import argparse
 
-# قراءة المسار من سطر الأوامر
-parser = argparse.ArgumentParser(description="Organize files by type.")
-parser.add_argument("path", help="Path of the folder to organize")
-args = parser.parse_args()
-
-source_folder = args.path
+source_folder = input("أدخل مسار المجلد اللي عايز ترتبه: ")
 
 file_types = {
     "PDFs": [".pdf"],
@@ -29,7 +23,6 @@ for filename in os.listdir(source_folder):
                 shutil.move(file_path, os.path.join(source_folder, folder, filename))
                 moved = True
                 break
-
         if not moved:
             others_folder = os.path.join(source_folder, "Others")
             os.makedirs(others_folder, exist_ok=True)
