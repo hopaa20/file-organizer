@@ -18,3 +18,18 @@ python file\_organizer.py
 
 
 
+
+المتطلبات
+
+Python 3.x
+
+مكتبات مدمجة في Python (os, shutil) لذا لا تحتاج تثبيت أي شيء إضافي.
+
+
+---
+
+## **4️⃣ requirements.txt**
+
+
+
+
